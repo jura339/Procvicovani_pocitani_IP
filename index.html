@@ -17,7 +17,7 @@
       padding: 10px;
       display: flex;
       justify-content: center;
-      font-size: 16px; 
+      font-size: 20px; 
     }
 
     /* main layout */
@@ -54,7 +54,7 @@
     }
 
     .notepad-title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #333;
       border-bottom: 2px solid #e0e0e0;
@@ -69,7 +69,7 @@
       border-radius: 6px;
       background-color: #fcf8e3;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 16px; /* Zvětšeno pro tabuli */
+      font-size: 20px; /* Zvětšeno pro tabuli */
       resize: vertical;
       line-height: 1.5;
     }
@@ -141,7 +141,7 @@
     }
 
     .settings-title {
-      font-size: 15px;
+      font-size: 19px;
       font-weight: bold;
       color: #444;
       margin-bottom: 10px;
@@ -154,7 +154,7 @@
     }
 
     .checkbox-label {
-      font-size: 15px;
+      font-size: 19px;
       color: #333;
       display: flex;
       align-items: center;
@@ -190,11 +190,50 @@
       border-radius: 6px;
       background-color: #fafafa;
       color: #333;
-      font-size: 20px; /* Větší text pro IP adresu */
+      font-size: 26px; /* Větší text pro IP adresu */
       font-weight: bold;
       font-family: 'Courier New', Courier, monospace;
       resize: vertical;
     }
+
+    /* Subnetting magic osa */
+    .magic-osa-container {
+      margin-bottom: 20px;
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .magic-osa-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 12px;
+    }
+
+    .magic-osa-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    .magic-osa-table th, .magic-osa-table td {
+      border: 1.5px solid #000;
+      padding: 8px 4px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .magic-osa-footer {
+      margin-top: 10px;
+      font-size: 19px;
+      font-weight: bold;
+      color: #000;
+    }
+
+
+
 
     .btn {
       padding: 12px 20px;
@@ -204,7 +243,7 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
-      font-size: 16px; /* Zvětšeno */
+      font-size: 18px; /* Zvětšeno */
       white-space: nowrap;
     }
 
@@ -220,7 +259,7 @@
     }
 
     .input-group label {
-      font-size: 15px;
+      font-size: 22px;
       font-weight: bold;
       color: #444;
     }
@@ -244,7 +283,7 @@
       padding: 12px 14px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-size: 16px; /* Zvětšeno pro čitelnost */
+      font-size: 22px; /* Zvětšeno pro čitelnost */
       background-color: #fff;
       transition: background-color 0.3s;
     }
@@ -283,7 +322,7 @@
     }
 
     .explanation-container h2 {
-      font-size: 20px;
+      font-size: 25px;
       margin-bottom: 14px;
       color: #007bff;
       border-bottom: 2px solid #e0e0e0;
@@ -300,7 +339,7 @@
 
     .step-title {
       font-weight: bold;
-      font-size: 17px;
+      font-size: 20px;
       margin-bottom: 8px;
       color: #333;
     }
@@ -311,7 +350,7 @@
       color: #f8f8f2;
       padding: 16px;
       border-radius: 6px;
-      font-size: 15px;
+      font-size: 18px;
       overflow-x: auto;
       line-height: 1.6;
     }
@@ -344,7 +383,7 @@
     }
 
     .calc-box h3 {
-      font-size: 18px;
+      font-size: 22px;
       margin-bottom: 14px;
       color: #007bff;
     }
@@ -451,9 +490,59 @@
 
           <!-- Output + Button 1 -->
           <div class="output-section">
-            <textarea id="TaskIp" class="generated-output" placeholder="Output..." readonly></textarea>
+            <input type="text" id="TaskIp" class="generated-output" placeholder="192.168.1.1/24" />
             <button class="btn" data-i18n="btn1" onclick="newProblem()">Vygenerovat novou IP</button>
           </div>
+
+          <!-- Subnetting magic osa -->
+      <div class="magic-osa-container">
+        <div class="magic-osa-title" data-i18n="magicOsaTitle">Subnetting - magic osa</div>
+        <table class="magic-osa-table">
+          <tr>
+            <td>2048</td>
+            <td>1024</td>
+            <td>512</td>
+            <td>256</td>
+            <td>128</td>
+            <td>64</td>
+            <td>32</td>
+            <td>16</td>
+            <td>8</td>
+            <td>4</td>
+            <td>2</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>/21</td>
+            <td>/22</td>
+            <td>/23</td>
+            <td>/24</td>
+            <td>/25</td>
+            <td>/26</td>
+            <td>/27</td>
+            <td>/28</td>
+            <td>/29</td>
+            <td>/30</td>
+            <td>/31</td>
+            <td>/32</td>
+          </tr>
+          <tr>
+            <td>.248.0</td>
+            <td>.252.0</td>
+            <td>.254.0</td>
+            <td>.0</td>
+            <td>.128</td>
+            <td>.192</td>
+            <td>.224</td>
+            <td>.240</td>
+            <td>.248</td>
+            <td>.252</td>
+            <td>.254</td>
+            <td>.255</td>
+          </tr>
+        </table>
+        <div class="magic-osa-footer" data-i18n="magicOsaFooter">Počet reálných hostů: X-2</div>
+      </div>
 
           <!-- Select Type -->
           <div class="select-group">
@@ -521,11 +610,11 @@
             <div style="display: flex; flex-direction: column; gap: 12px;">
               <div class="input-group">
                 <label data-i18n="decLabel">Desítková soustava (Dec):</label>
-                <input type="text" id="calcDecInput" placeholder="např. 192" oninput="convertFromDec()">
+                <input type="text" id="calcDecInput" placeholder="192" oninput="convertFromDec()">
               </div>
               <div class="input-group">
                 <label data-i18n="binLabel">Binární soustava (Bin):</label>
-                <input type="text" id="calcBinInput" placeholder="např. 11000000" oninput="convertFromBin()">
+                <input type="text" id="calcBinInput" placeholder="11000000" oninput="convertFromBin()">
               </div>
             </div>
           </div>
@@ -690,13 +779,16 @@
         lastHostInfo: "Poslední použitelný host (Broadcast - 1)",
         hostsInfo: "Počet použitelných hostů",
         noTypeSelected: "Chyba: Není povolen žádný typ IP adresy k vygenerování!",
+        invalidIpFormat: "Chyba: Zadaná IP adresa neodpovídá požadovanému formátu x.x.x.x/prefix.",
         loopbackMulticastMsg: "IP adresa <strong>{ip}/{prefix}</strong> spadá do kategorie <strong>{type}</strong>. U těchto adres se standardně nepočítá podsíť ani rozsah hostů.",
         notepadTitle: "Poznámkový blok",
         notepadPlaceholder: "Sem si můžete psát poznámky nebo binární hodnoty pod sebe...\nNapř.:\n11000000 = 192\n10101000 = 168",
         progCalcTitle: "Programátorská kalkulačka (Dec ⟷ Bin)",
         stdCalcTitle: "Standardní kalkulačka",
         decLabel: "Desítková soustava (Dec):",
-        binLabel: "Binární soustava (Bin):"
+        binLabel: "Binární soustava (Bin):",
+        magicOsaTitle: "Subnetting - magic osa",
+        magicOsaFooter: "Počet reálných hostů: X-2",
       },
       en: {
         tab1: "Excercise",
@@ -735,13 +827,16 @@
         lastHostInfo: "Last usable host (Broadcast - 1)",
         hostsInfo: "Number of usable hosts",
         noTypeSelected: "Error: No IP address type is enabled for generation!",
+        invalidIpFormat: "Error: The entered IP address does not match the required x.x.x.x/prefix format.",
         loopbackMulticastMsg: "IP address <strong>{ip}/{prefix}</strong> belongs to the <strong>{type}</strong> category. Subnet and host range are typically not calculated for these addresses.",
         notepadTitle: "Notepad",
         notepadPlaceholder: "You can write notes or binary values here...\nE.g.:\n11000000 = 192\n10101000 = 168",
         progCalcTitle: "Programmer Calculator (Dec ⟷ Bin)",
         stdCalcTitle: "Standard Calculator",
         decLabel: "Decimal (Dec):",
-        binLabel: "Binary (Bin):"
+        binLabel: "Binary (Bin):",
+        magicOsaTitle: "Subnetting - magic axis",
+        magicOsaFooter: "Number of real hosts: X-2",
       }
     }
 
@@ -954,7 +1049,7 @@
       solution.lastHost = intToIp(solution.lastHost);
     }
 
-
+    
 //------------------------------------
 //prevod jednotek
 
@@ -995,6 +1090,30 @@ function ipToBinStr(ipAddressStr) {
 //------------------------------------
 //interakce s webovkou
 
+// Validace formátu x.x.x.x/prefix
+function isValidIpCidr(str) {
+  const parts = str.split('/');
+  if (parts.length !== 2) return false;
+  const ipParts = parts[0].split('.');
+  if (ipParts.length !== 4) return false;
+  
+  for (let i = 0; i < 4; i++) {
+    const p = ipParts[i];
+    if (!/^\d{1,3}$/.test(p)) return false;
+    const num = parseInt(p, 10);
+    if (num < 0 || num > 255) return false;
+    if (p.length > 1 && p[0] === '0') return false;
+  }
+  
+  const prefixStr = parts[1];
+  if (!/^\d{1,2}$/.test(prefixStr)) return false;
+  const prefix = parseInt(prefixStr, 10);
+  if (prefix < 0 || prefix > 32) return false;
+  if (prefixStr.length > 1 && prefixStr[0] === '0') return false;
+  
+  return true;
+}
+
 //new problem
 function newProblem() {
      TaskIp.value = generateIP();
@@ -1010,6 +1129,38 @@ function newProblem() {
 
     //check s vysledky
     function checkCorrection() {
+      // Zpracování ručně zadané IP adresy a prefixu (pokud uživatel zadal vlastní)
+      let val = TaskIp.value.trim();
+      if (!isValidIpCidr(val)) {
+        alert(translations[currentLang].invalidIpFormat);
+        return;
+      }
+      if (val.includes('/')) {
+        let parts = val.split('/');
+        ipStr = parts[0].trim();
+        prefix = parseInt(parts[1].trim(), 10);
+        ip = ipStr.split('.').map(Number);
+      } else {
+        ipStr = val;
+        ip = ipStr.split('.').map(Number);
+      }
+
+      if (ip[0] === 127) {
+        ipType = "loopback";
+      } else if (ip[0] >= 224 && ip[0] <= 239) {
+        ipType = "multicast";
+      } else if ((ip[0] === 10) || (ip[0] === 172 && ip[1] >= 16 && ip[1] <= 31) || (ip[0] === 192 && ip[1] === 168)) {
+        ipType = "private";
+      } else {
+        ipType = "public";
+      }
+
+      if (isNaN(prefix)) {
+        prefix = 24;
+      }
+
+      correctSolution();
+
       //brava pozadi podle spravnosti
       function setFieldStatus(element, isCorrect) {
         if (isCorrect) {
@@ -1046,107 +1197,50 @@ function newProblem() {
 
 //ukazat reseni
 function showSolution() {
+  let val = TaskIp.value.trim();
+  if (!isValidIpCidr(val)) {
+    alert(translations[currentLang].invalidIpFormat);
+    return;
+  }
+  if (val.includes('/')) {
+    let parts = val.split('/');
+    ipStr = parts[0].trim();
+    prefix = parseInt(parts[1].trim(), 10);
+    ip = ipStr.split('.').map(Number);
+  } else {
+    ipStr = val;
+    ip = ipStr.split('.').map(Number);
+  }
+
+  if (ip[0] === 127) {
+    ipType = "loopback";
+  } else if (ip[0] >= 224 && ip[0] <= 239) {
+    ipType = "multicast";
+  } else if ((ip[0] === 10) || (ip[0] === 172 && ip[1] >= 16 && ip[1] <= 31) || (ip[0] === 192 && ip[1] === 168)) {
+    ipType = "private";
+  } else {
+    ipType = "public";
+  }
+
+  if (isNaN(prefix)) {
+    prefix = 24;
+  }
+
+  correctSolution();
+
   inputs.Type.value = solution.IpType;
   inputs.Mask.value = solution.mask;
   inputs.Network.value = solution.network;
   inputs.FirstHost.value = solution.firstHost;
   inputs.Wildcard.value = solution.wildcard;
-  inputs.LastHost.value = solution.lastHost;
   inputs.Broadcast.value = solution.broadcast;
+  inputs.LastHost.value = solution.lastHost;
   inputs.Hosts.value = solution.hosts;
 
-    //vraceni bileho pozadi
   Object.values(inputs).forEach(input => {
-    input.style.backgroundColor = "";
+    input.style.backgroundColor = '';
   });
-
-  //zobrazeni postupu výpočtu pod vším textem
-  generateExplanation();
-  document.getElementById('ExplanationContainer').style.display = 'block';
 }
-
-function generateExplanation() {
-  const expDiv = document.getElementById('ExplanationContent');
-  const t = translations[currentLang];
-
-  if (ipType === "loopback" || ipType === "multicast") {
-    let msg = t.loopbackMulticastMsg
-              .replace('{ip}', ipStr)
-              .replace('{prefix}', prefix)
-              .replace('{type}', ipType.toUpperCase());
-
-    expDiv.innerHTML = `
-      <div class="step-box">
-        <div class="step-title">${t.step1Title}</div>
-        <p>${msg}</p>
-      </div>
-    `;
-    return;
-  }
-
-  const binaryIp = ipToBinStr(ipStr);
-  const binaryMask = ipToBinStr(solution.mask);
-  const binaryNet = ipToBinStr(solution.network);
-  const binaryWildcard = ipToBinStr(solution.wildcard);
-  const binaryBroadcast = ipToBinStr(solution.broadcast);
-
-  //generace bin retezce
-  let fullOnes = "1".repeat(prefix) + "0".repeat(32 - prefix);
-  let binMaskPreview = fullOnes.match(/.{1,8}/g).join('.');
-
-  expDiv.innerHTML = `
-    <!-- Krok 1: Typ IP -->
-    <div class="step-box">
-      <div class="step-title">${t.step1Title}</div>
-      <p style="font-size: 15px;">Zadaná IP adresa <strong>${ipStr}/${prefix}</strong> patří do kategorie: <strong>${ipType.toUpperCase()}</strong>.</p>
-    </div>
-
-    <!-- Krok 2: Maska z prefixu -->
-    <div class="step-box">
-      <div class="step-title">${t.step2Title} (${prefix})</div>
-      <p style="margin-bottom: 8px; font-size: 15px;">${t.step2Desc}</p>
-      <div class="binary-calc">
-        <div>Prefix /${prefix} v binárním tvaru (32 bitů):</div>
-        <div class="and-op">${binMaskPreview}</div>
-        <div class="result">Po převodu po octetech na desítkovou soustavu: <strong>${solution.mask}</strong></div>
-      </div>
-    </div>
-
-    <!-- Krok 3: Síťová adresa přes AND -->
-    <div class="step-box">
-      <div class="step-title">${t.step3Title}</div>
-      <p style="margin-bottom: 8px; font-size: 15px;">${t.step3Desc}</p>
-      <div class="binary-calc">
-        <div>&nbsp;&nbsp;${binaryIp} &nbsp;(${t.ipInfo}: ${ipStr})</div>
-        <div class="and-op">&amp; ${binaryMask} &nbsp;(${t.maskInfo}: ${solution.mask})</div>
-        <div class="result">&nbsp;&nbsp;${binaryNet} &nbsp;(${t.netResult}: ${solution.network})</div>
-      </div>
-    </div>
-
-    <!-- Krok 4: Wildcard a Broadcast -->
-    <div class="step-box">
-      <div class="step-title">${t.step4Title}</div>
-      <p style="margin-bottom: 8px; font-size: 15px;">${t.step4Desc}</p>
-      <div class="binary-calc">
-        <div>&nbsp;&nbsp;${binaryNet} &nbsp;(${t.netResult}: ${solution.network})</div>
-        <div class="and-op">| ${binaryWildcard} &nbsp;(${t.wildcardInfo}: ${solution.wildcard})</div>
-        <div class="result">&nbsp;&nbsp;${binaryBroadcast} &nbsp;(Broadcast: ${solution.broadcast})</div>
-      </div>
-    </div>
-
-    <!-- Krok 5: Hosté -->
-    <div class="step-box">
-      <div class="step-title">${t.step5Title}</div>
-      <ul style="margin-left: 20px; font-size: 15px; line-height: 1.6;">
-        <li><strong>${t.firstHostInfo}:</strong> ${solution.firstHost}</li>
-        <li><strong>${t.lastHostInfo}:</strong> ${solution.lastHost}</li>
-        <li><strong>${t.hostsInfo}:</strong> 2<sup>(32 - ${prefix})</sup> - 2 = <strong>${solution.hosts}</strong></li>
-      </ul>
-    </div>
-  `;
-}
-
-newProblem();
   </script>
 </body>
 </html>

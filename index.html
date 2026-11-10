@@ -232,9 +232,6 @@
       color: #000;
     }
 
-
-
-
     .btn {
       padding: 12px 20px;
       background-color: #007bff;
@@ -412,7 +409,7 @@
       background: #e0e0e0;
       border: none;
       border-radius: 6px;
-      font-size: 18px; /* tlactika calc */
+      font-size: 18px;
       font-weight: bold;
       cursor: pointer;
       background-color: #fff;
@@ -461,7 +458,7 @@
           <div style="font-size: 14px; color: #666; font-weight: bold;" data-i18n="authorText">
             Created by Jiří Žák
           </div>
-          
+
           <div class="lang-switch">
             <button class="lang-btn active" onclick="setLanguage('cs', event)">CZ</button>
             <button class="lang-btn" onclick="setLanguage('en', event)">EN</button>
@@ -499,54 +496,54 @@
           </div>
 
           <!-- Subnetting magic osa -->
-      <div class="magic-osa-container">
-        <div class="magic-osa-title" data-i18n="magicOsaTitle">Subnetting - magic osa</div>
-        <table class="magic-osa-table">
-          <tr>
-            <td>2048</td>
-            <td>1024</td>
-            <td>512</td>
-            <td>256</td>
-            <td>128</td>
-            <td>64</td>
-            <td>32</td>
-            <td>16</td>
-            <td>8</td>
-            <td>4</td>
-            <td>2</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>/21</td>
-            <td>/22</td>
-            <td>/23</td>
-            <td>/24</td>
-            <td>/25</td>
-            <td>/26</td>
-            <td>/27</td>
-            <td>/28</td>
-            <td>/29</td>
-            <td>/30</td>
-            <td>/31</td>
-            <td>/32</td>
-          </tr>
-          <tr>
-            <td>.248.0</td>
-            <td>.252.0</td>
-            <td>.254.0</td>
-            <td>.0</td>
-            <td>.128</td>
-            <td>.192</td>
-            <td>.224</td>
-            <td>.240</td>
-            <td>.248</td>
-            <td>.252</td>
-            <td>.254</td>
-            <td>.255</td>
-          </tr>
-        </table>
-        <div class="magic-osa-footer" data-i18n="magicOsaFooter">Počet reálných hostů: X-2</div>
-      </div>
+          <div class="magic-osa-container">
+            <div class="magic-osa-title" data-i18n="magicOsaTitle">Subnetting - magic osa</div>
+            <table class="magic-osa-table">
+              <tr>
+                <td>2048</td>
+                <td>1024</td>
+                <td>512</td>
+                <td>256</td>
+                <td>128</td>
+                <td>64</td>
+                <td>32</td>
+                <td>16</td>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>/21</td>
+                <td>/22</td>
+                <td>/23</td>
+                <td>/24</td>
+                <td>/25</td>
+                <td>/26</td>
+                <td>/27</td>
+                <td>/28</td>
+                <td>/29</td>
+                <td>/30</td>
+                <td>/31</td>
+                <td>/32</td>
+              </tr>
+              <tr>
+                <td>.248.0</td>
+                <td>.252.0</td>
+                <td>.254.0</td>
+                <td>.0</td>
+                <td>.128</td>
+                <td>.192</td>
+                <td>.224</td>
+                <td>.240</td>
+                <td>.248</td>
+                <td>.252</td>
+                <td>.254</td>
+                <td>.255</td>
+              </tr>
+            </table>
+            <div class="magic-osa-footer" data-i18n="magicOsaFooter">Počet reálných hostů: X-2</div>
+          </div>
 
           <!-- Select Type -->
           <div class="select-group">
@@ -568,25 +565,25 @@
               </div>
               <div class="input-group">
                 <label data-i18n="label2">Adresa sítě:</label>
-                <input id=Network type="text" placeholder="192.168.1.0">
+                <input id="Network" type="text" placeholder="192.168.1.0">
               </div>
               <div class="input-group">
                 <label data-i18n="label3">Adresa 1. zařízení:</label>
-                <input id=FirstHost type="text" placeholder="192.168.1.1">
+                <input id="FirstHost" type="text" placeholder="192.168.1.1">
               </div>
             </div>
             <div class="column">
               <div class="input-group">
                 <label data-i18n="label4">Wildcard:</label>
-                <input id=Wildcard type="text" placeholder="0.0.0.255">
+                <input id="Wildcard" type="text" placeholder="0.0.0.255">
               </div>
               <div class="input-group">
                 <label data-i18n="label5">Adresa broadcastu:</label>
-                <input id=Broadcast type="text" placeholder="192.168.1.255">
+                <input id="Broadcast" type="text" placeholder="192.168.1.255">
               </div>
               <div class="input-group">
                 <label data-i18n="label6">Adresa posledního zařízení:</label>
-                <input id=LastHost type="text" placeholder="192.168.1.254">
+                <input id="LastHost" type="text" placeholder="192.168.1.254">
               </div>
             </div>
           </div>
@@ -595,7 +592,7 @@
           <div class="full-width-input">
             <div class="input-group">
               <label data-i18n="label7">Počet hostů:</label>
-              <input id=Hosts type="text" placeholder="ex. 30">
+              <input id="Hosts" type="text" placeholder="ex. 30">
             </div>
           </div>
 
@@ -847,7 +844,6 @@
     //nastaveni jazyka
     function setLanguage(lang, event) {
       currentLang = lang;
-      //Aktualizace textu (zalozky, nadpisy, tlacitka, labely)
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -855,7 +851,6 @@
         }
       });
 
-      //placeholders pro poznamky
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         if (translations[lang] && translations[lang][key]) {
@@ -863,7 +858,6 @@
         }
       });
 
-      //zvyrazneni tlacitka jazyku
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active');
       });
@@ -871,7 +865,6 @@
         event.target.classList.add('active');
       }
 
-      // Aktualizace vysvětlení, pokud je zobrazeno
       if (document.getElementById('ExplanationContainer').style.display === 'block') {
         generateExplanation();
       }
@@ -880,7 +873,6 @@
     //---------------------------------
     //kalkulacka
 
-    //programatorska (Dec <-> Bin)
     function convertFromDec() {
       const decVal = document.getElementById('calcDecInput').value.trim();
       const binInput = document.getElementById('calcBinInput');
@@ -907,7 +899,6 @@
         return;
       }
       
-      // Kontrola, zda obsahuje pouze 0 a 1
       if (!/^[01]+$/.test(binVal)) {
         decInput.value = "Invalid bin";
         return;
@@ -917,8 +908,6 @@
       decInput.value = num;
     }
 
-  
-    //standard kalkulacka
     const stdDisplay = document.getElementById('stdDisplay');
 
     function stdAppend(val) {
@@ -935,7 +924,6 @@
 
     function stdCalculate() {
       try {
-        //
         let result = Function('"use strict";return (' + stdDisplay.value + ')')();
         stdDisplay.value = result;
       } catch (e) {
@@ -946,7 +934,6 @@
     //---------------------------------
     //Generace prikladu
     function generateIP() {
-      // Kontrola, zda je alespoň něco povolené
       if (!IpTypes.private && !IpTypes.public && !IpTypes.loopback && !IpTypes.multicast) {
         alert(translations[currentLang].noTypeSelected);
         return "";
@@ -955,43 +942,37 @@
       ip = [];
       IpType = "";
       prefix = "";
-     //generate IP
+
       while (true){
         ip = [];
         let rand = random(0,100);
-        if (rand < 25 && IpTypes.private == true) {        //192.168
+        if (rand < 25 && IpTypes.private == true) {
           ip.push(192, 168, random(0,255), random(0,255));
           ipType = "private";
           break;
-
-        } else if (rand < 50 && IpTypes.private == true) {  //172
+        } else if (rand < 50 && IpTypes.private == true) {
           ip.push(172, random(16,31), random(0,255), random(0,253) + 1);
           ipType = "private";
           break;
-
-        } else if (rand < 75 && IpTypes.private == true) {  //10 
+        } else if (rand < 75 && IpTypes.private == true) {
           ip.push(10, random(0,255), random(0,255), random(0,253) + 1);
           ipType = "private";
           break;
-
-        } else if (rand < 90 && IpTypes.public == true) {   //public
+        } else if (rand < 90 && IpTypes.public == true) {
           ip.push(Math.floor(Math.random() * 150) + 20, random(0,255), random(0,255), random(0,253) + 1);
-          if(ip[0] == 127 || (ip[0]==169 && ip[1]==254)) { //zarucuje ze neselectnu zde loopback nebo APIPA
+          if(ip[0] == 127 || (ip[0]==169 && ip[1]==254)) {
             continue;
           }
           ipType = "public";
           break;
-
-        } else if (rand < 95 && IpTypes.loopback == true) {                 //loopback
+        } else if (rand < 95 && IpTypes.loopback == true) {
           ip.push(127, random(0,255), random(0,255), random(0,253));
           ipType = "loopback";
           break;
-
-        } else if (rand < 100 && IpTypes.multicast == true) {                //multicast
+        } else if (rand < 100 && IpTypes.multicast == true) {
           ip.push(random(224,239), random(0,255), random(0,255), random(0,255));
           ipType = "multicast";
           break;
-
         }
       }
 
@@ -999,15 +980,12 @@
       ipStr = ip.join('.');
       correctSolution();
       return [ipStr, prefix].join('/');
-
     }
 
-    //generator celych cisel
     function random(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
+    }
 
-    //generace prefixu
     function generatePrefix() {
       if (ipType == "loopback" || ipType == "multicast"){
         return 32;
@@ -1019,11 +997,9 @@
       }
     }
 
-    //generate correct solution
     function correctSolution() {
       solution.IpType = ipType;
 
-      //pookud jde o loopback nebo multicast, pole zustanou prazdna
       if (ipType === "loopback" || ipType === "multicast") {
         solution.mask = "";
         solution.network = "";
@@ -1035,7 +1011,6 @@
         return;
       }
 
-      //vypocet reseni
       solution.mask = (2**32 - 1) - (2**(32 - prefix) - 1);
       solution.network = solution.mask & ipToInt(ipStr);
       solution.wildcard = 2**32 - solution.mask -1;
@@ -1044,7 +1019,6 @@
       solution.lastHost = solution.broadcast - 1;
       solution.hosts = 2**(32 - prefix) - 2;
 
-      //conversion to IP
       solution.mask = intToIp(solution.mask);
       solution.network = intToIp(solution.network);
       solution.wildcard = intToIp(solution.wildcard);
@@ -1053,87 +1027,71 @@
       solution.lastHost = intToIp(solution.lastHost);
     }
 
-    
-//------------------------------------
-//prevod jednotek
+    //------------------------------------
+    //prevod jednotek
 
-//int to ip
-function intToIp(intiger) {
-  let octet1 = (intiger >>> 24) & 255
-  let octet2 = (intiger >>> 16) & 255
-  let octet3 = (intiger >>> 8) & 255
-  let octet4 = (intiger >>> 0) & 255
+    function intToIp(intiger) {
+      let octet1 = (intiger >>> 24) & 255
+      let octet2 = (intiger >>> 16) & 255
+      let octet3 = (intiger >>> 8) & 255
+      let octet4 = (intiger >>> 0) & 255
 
-  return [octet1, octet2, octet3, octet4].join('.');
-}
+      return [octet1, octet2, octet3, octet4].join('.');
+    }
 
-//ip to int
-function ipToInt(ip) {
-  let temp = ip.split('.');
-  return Number(temp[0]) * (2**24) + 
-         Number(temp[1]) * (2**16) + 
-         Number(temp[2]) * (2**8)  + 
-         Number(temp[3]);
-}
+    function ipToInt(ip) {
+      let temp = ip.split('.');
+      return Number(temp[0]) * (2**24) + 
+             Number(temp[1]) * (2**16) + 
+             Number(temp[2]) * (2**8)  + 
+             Number(temp[3]);
+    }
 
-//int to Binary
-function intToBin(intiger) {
-  return (int >>> 0).toString;
-}
+    function octetToBin(num) {
+      return (num >>> 0).toString(2).padStart(8, '0');
+    }
 
-//octet na bin
-function octetToBin(num) {
-  return (num >>> 0).toString(2).padStart(8, '0');
-}
+    function ipToBinStr(ipAddressStr) {
+      return ipAddressStr.split('.').map(oct => octetToBin(parseInt(oct, 10))).join('.');
+    }
 
-//ip na bin
-function ipToBinStr(ipAddressStr) {
-  return ipAddressStr.split('.').map(oct => octetToBin(parseInt(oct, 10))).join('.');
-}
+    //------------------------------------
+    //interakce s webovkou
 
-//------------------------------------
-//interakce s webovkou
+    function isValidIpCidr(str) {
+      const parts = str.split('/');
+      if (parts.length !== 2) return false;
+      const ipParts = parts[0].split('.');
+      if (ipParts.length !== 4) return false;
+      
+      for (let i = 0; i < 4; i++) {
+        const p = ipParts[i];
+        if (!/^\d{1,3}$/.test(p)) return false;
+        const num = parseInt(p, 10);
+        if (num < 0 || num > 255) return false;
+        if (p.length > 1 && p[0] === '0') return false;
+      }
+      
+      const prefixStr = parts[1];
+      if (!/^\d{1,2}$/.test(prefixStr)) return false;
+      const prefix = parseInt(prefixStr, 10);
+      if (prefix < 0 || prefix > 32) return false;
+      if (prefixStr.length > 1 && prefixStr[0] === '0') return false;
+      
+      return true;
+    }
 
-// Validace formátu x.x.x.x/prefix
-function isValidIpCidr(str) {
-  const parts = str.split('/');
-  if (parts.length !== 2) return false;
-  const ipParts = parts[0].split('.');
-  if (ipParts.length !== 4) return false;
-  
-  for (let i = 0; i < 4; i++) {
-    const p = ipParts[i];
-    if (!/^\d{1,3}$/.test(p)) return false;
-    const num = parseInt(p, 10);
-    if (num < 0 || num > 255) return false;
-    if (p.length > 1 && p[0] === '0') return false;
-  }
-  
-  const prefixStr = parts[1];
-  if (!/^\d{1,2}$/.test(prefixStr)) return false;
-  const prefix = parseInt(prefixStr, 10);
-  if (prefix < 0 || prefix > 32) return false;
-  if (prefixStr.length > 1 && prefixStr[0] === '0') return false;
-  
-  return true;
-}
+    function newProblem() {
+      TaskIp.value = generateIP();
+      document.getElementById('ExplanationContainer').style.display = 'none';
+      inputs.Type.value = "";
+      Object.values(inputs).forEach(input => {
+        input.value = "";
+        input.style.backgroundColor = "";
+      });
+    }
 
-//new problem
-function newProblem() {
-     TaskIp.value = generateIP();
-
-     //barveni pole
-     document.getElementById('ExplanationContainer').style.display = 'none';
-     inputs.Type.value = "";
-     Object.values(inputs).forEach(input => {
-       input.value = "";
-       input.style.backgroundColor = "";
-     });
-   }
-
-    //check s vysledky
     function checkCorrection() {
-      // Zpracování ručně zadané IP adresy a prefixu (pokud uživatel zadal vlastní)
       let val = TaskIp.value.trim();
       if (!isValidIpCidr(val)) {
         alert(translations[currentLang].invalidIpFormat);
@@ -1165,86 +1123,149 @@ function newProblem() {
 
       correctSolution();
 
-      //brava pozadi podle spravnosti
       function setFieldStatus(element, isCorrect) {
         if (isCorrect) {
-          element.style.backgroundColor = '#d4edda'; //zelena
+          element.style.backgroundColor = '#d4edda';
         } else {
-          element.style.backgroundColor = '#f8d7da'; //cervena
+          element.style.backgroundColor = '#f8d7da';
         }
       }
 
-      //ip type
-      setFieldStatus(inputs.Type, inputs.Type.value === solution.IpType); //por jistotu trim, kdyby byl user debil :DD
-
-      //maska
+      setFieldStatus(inputs.Type, inputs.Type.value === solution.IpType);
       setFieldStatus(inputs.Mask, inputs.Mask.value.trim() === solution.mask);
-
-      //network
       setFieldStatus(inputs.Network, inputs.Network.value.trim() === solution.network);
-
-      //first host
       setFieldStatus(inputs.FirstHost, inputs.FirstHost.value.trim() === solution.firstHost);
-
-      //wildcard
       setFieldStatus(inputs.Wildcard, inputs.Wildcard.value.trim() === solution.wildcard);
-
-      // broadcast
       setFieldStatus(inputs.Broadcast, inputs.Broadcast.value.trim() === solution.broadcast);
-
-      //last host
       setFieldStatus(inputs.LastHost, inputs.LastHost.value.trim() === solution.lastHost);
-
-      // hosts
-      setFieldStatus(inputs.Hosts, Number(inputs.Hosts.value.trim()) === Number(solution.hosts)); //porovnat jako int
+      setFieldStatus(inputs.Hosts, Number(inputs.Hosts.value.trim()) === Number(solution.hosts));
     }
 
-//ukazat reseni
-function showSolution() {
-  let val = TaskIp.value.trim();
-  if (!isValidIpCidr(val)) {
-    alert(translations[currentLang].invalidIpFormat);
-    return;
-  }
-  if (val.includes('/')) {
-    let parts = val.split('/');
-    ipStr = parts[0].trim();
-    prefix = parseInt(parts[1].trim(), 10);
-    ip = ipStr.split('.').map(Number);
-  } else {
-    ipStr = val;
-    ip = ipStr.split('.').map(Number);
-  }
+    function showSolution() {
+      let val = TaskIp.value.trim();
+      if (!isValidIpCidr(val)) {
+        alert(translations[currentLang].invalidIpFormat);
+        return;
+      }
+      if (val.includes('/')) {
+        let parts = val.split('/');
+        ipStr = parts[0].trim();
+        prefix = parseInt(parts[1].trim(), 10);
+        ip = ipStr.split('.').map(Number);
+      } else {
+        ipStr = val;
+        ip = ipStr.split('.').map(Number);
+      }
 
-  if (ip[0] === 127) {
-    ipType = "loopback";
-  } else if (ip[0] >= 224 && ip[0] <= 239) {
-    ipType = "multicast";
-  } else if ((ip[0] === 10) || (ip[0] === 172 && ip[1] >= 16 && ip[1] <= 31) || (ip[0] === 192 && ip[1] === 168)) {
-    ipType = "private";
-  } else {
-    ipType = "public";
-  }
+      if (ip[0] === 127) {
+        ipType = "loopback";
+      } else if (ip[0] >= 224 && ip[0] <= 239) {
+        ipType = "multicast";
+      } else if ((ip[0] === 10) || (ip[0] === 172 && ip[1] >= 16 && ip[1] <= 31) || (ip[0] === 192 && ip[1] === 168)) {
+        ipType = "private";
+      } else {
+        ipType = "public";
+      }
 
-  if (isNaN(prefix)) {
-    prefix = 24;
-  }
+      if (isNaN(prefix)) {
+        prefix = 24;
+      }
 
-  correctSolution();
+      correctSolution();
 
-  inputs.Type.value = solution.IpType;
-  inputs.Mask.value = solution.mask;
-  inputs.Network.value = solution.network;
-  inputs.FirstHost.value = solution.firstHost;
-  inputs.Wildcard.value = solution.wildcard;
-  inputs.Broadcast.value = solution.broadcast;
-  inputs.LastHost.value = solution.lastHost;
-  inputs.Hosts.value = solution.hosts;
+      inputs.Type.value = solution.IpType;
+      inputs.Mask.value = solution.mask;
+      inputs.Network.value = solution.network;
+      inputs.FirstHost.value = solution.firstHost;
+      inputs.Wildcard.value = solution.wildcard;
+      inputs.Broadcast.value = solution.broadcast;
+      inputs.LastHost.value = solution.lastHost;
+      inputs.Hosts.value = solution.hosts;
 
-  Object.values(inputs).forEach(input => {
-    input.style.backgroundColor = '';
-  });
-}
+      Object.values(inputs).forEach(input => {
+        input.style.backgroundColor = '';
+      });
+
+      // Zobrazení podrobného vysvětlení (opravená chybějící funkce)
+      generateExplanation();
+      document.getElementById('ExplanationContainer').style.display = 'block';
+    }
+
+    // Funkce pro generování samotného textu vysvětlení
+    function generateExplanation() {
+      const expDiv = document.getElementById('ExplanationContent');
+      const t = translations[currentLang];
+
+      if (ipType === "loopback" || ipType === "multicast") {
+        let msg = t.loopbackMulticastMsg
+                  .replace('{ip}', ipStr)
+                  .replace('{prefix}', prefix)
+                  .replace('{type}', ipType.toUpperCase());
+
+        expDiv.innerHTML = `
+          <div class="step-box">
+            <div class="step-title">${t.step1Title}</div>
+            <p>${msg}</p>
+          </div>
+        `;
+        return;
+      }
+
+      const binaryIp = ipToBinStr(ipStr);
+      const binaryMask = ipToBinStr(solution.mask);
+      const binaryNet = ipToBinStr(solution.network);
+      const binaryWildcard = ipToBinStr(solution.wildcard);
+      const binaryBroadcast = ipToBinStr(solution.broadcast);
+
+      let fullOnes = "1".repeat(prefix) + "0".repeat(32 - prefix);
+      let binMaskPreview = fullOnes.match(/.{1,8}/g).join('.');
+
+      expDiv.innerHTML = `
+        <div class="step-box">
+          <div class="step-title">${t.step1Title}</div>
+          <p>Zadaná IP adresa <strong>${ipStr}/${prefix}</strong> patří do kategorie: <strong>${ipType.toUpperCase()}</strong>.</p>
+        </div>
+
+        <div class="step-box">
+          <div class="step-title">${t.step2Title} (${prefix})</div>
+          <p style="margin-bottom: 8px;">${t.step2Desc}</p>
+          <div class="binary-calc">
+            <div>Prefix /${prefix} v binárním tvaru (32 bitů):</div>
+            <div class="and-op">${binMaskPreview}</div>
+            <div class="result">Po převodu po octetech na desítkovou soustavu: <strong>${solution.mask}</strong></div>
+          </div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-title">${t.step3Title}</div>
+          <p style="margin-bottom: 8px;">${t.step3Desc}</p>
+          <div class="binary-calc">
+            <div>&nbsp;&nbsp;${binaryIp} &nbsp;(${t.ipInfo}: ${ipStr})</div>
+            <div class="and-op">&amp; ${binaryMask} &nbsp;(${t.maskInfo}: ${solution.mask})</div>
+            <div class="result">&nbsp;&nbsp;${binaryNet} &nbsp;(${t.netResult}: ${solution.network})</div>
+          </div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-title">${t.step4Title}</div>
+          <p style="margin-bottom: 8px;">${t.step4Desc}</p>
+          <div class="binary-calc">
+            <div>&nbsp;&nbsp;${binaryNet} &nbsp;(${t.netResult}: ${solution.network})</div>
+            <div class="and-op">| ${binaryWildcard} &nbsp;(${t.wildcardInfo}: ${solution.wildcard})</div>
+            <div class="result">&nbsp;&nbsp;${binaryBroadcast} &nbsp;(Broadcast: ${solution.broadcast})</div>
+          </div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-title">${t.step5Title}</div>
+          <ul style="margin-left: 20px; line-height: 1.6;">
+            <li><strong>${t.firstHostInfo}:</strong> ${solution.firstHost}</li>
+            <li><strong>${t.lastHostInfo}:</strong> ${solution.lastHost}</li>
+            <li><strong>${t.hostsInfo}:</strong> 2<sup>(32 - ${prefix})</sup> - 2 = <strong>${solution.hosts}</strong></li>
+          </ul>
+        </div>
+      `;
+    }
   </script>
 </body>
 </html>
